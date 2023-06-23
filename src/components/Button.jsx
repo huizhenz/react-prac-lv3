@@ -1,12 +1,11 @@
 import React from "react";
 import { styled } from "styled-components";
 
-const BtnTitle = styled.h2`
-  font-size: 30px;
-  margin: 20px 0px 10px 10px;
+const BtnTitle = styled.p`
+  font-size: 32px;
+  font-weight: 600;
+  margin: 30px 0px 20px 10px;
 `;
-
-const BtnBox = styled.div``;
 
 const LargeBtn = styled.button`
   width: 200px;
@@ -16,7 +15,7 @@ const LargeBtn = styled.button`
   background-color: white;
   font-weight: bold;
   color: ${(props) => props.color};
-  margin: 10px 5px 10px 10px;
+  margin: 10px 5px 5px 10px;
   cursor: pointer;
 
   // wow
@@ -61,7 +60,7 @@ function Button() {
   return (
     <>
       <BtnTitle>Button</BtnTitle>
-      <BtnBox>
+      <div>
         <LargeBtn
           borderColor="#00e3ae"
           color="black"
@@ -71,14 +70,14 @@ function Button() {
         >
           Large Primary Button
         </LargeBtn>
-        <MediumBtn backgroundColor="#00e3ae" darkColor="#3dac98" color="black">
+        <MediumBtn backgroundColor="#24e8bb" darkColor="#48b09d" color="black">
           Medium
         </MediumBtn>
-        <SmallBtn backgroundColor="#00e3ae" darkColor="#3dac98" color="black">
+        <SmallBtn backgroundColor="#24e8bb" darkColor="#48b09d" color="black">
           Small
         </SmallBtn>
-      </BtnBox>
-      <BtnBox>
+      </div>
+      <div>
         <LargeBtn
           borderColor="#ffc2a1"
           color="red"
@@ -88,13 +87,13 @@ function Button() {
         >
           Large Negative Button
         </LargeBtn>
-        <MediumBtn backgroundColor="#ffc2a1" darkColor="#d97338" color="red">
+        <MediumBtn backgroundColor="#fab2a4" darkColor="#d97338" color="red">
           Medium
         </MediumBtn>
-        <SmallBtn backgroundColor="#ffc2a1" darkColor="#d97338" color="red">
+        <SmallBtn backgroundColor="#fab2a4" darkColor="#d97338" color="red">
           Small
         </SmallBtn>
-      </BtnBox>
+      </div>
     </>
   );
 }
