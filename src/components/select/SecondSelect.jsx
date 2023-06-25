@@ -1,36 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
 
-const SelectField = styled.div`
-  width: 300px;
-  height: 40px;
-  border: 1px solid #dcdcdc;
-  border-radius: 10px;
-  margin-right: 10px;
-`;
-
-const SelectHeader = styled.div`
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const SelectList = styled.div`
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 10px;
-  margin-top: 5px;
-`;
-
-const SelectItem = styled.div`
-  padding: 10px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #eaeaea;
-  }
-`;
-
 function SecondSelect() {
   const options = ["리액트", "자바", "스프링", "리액트 네이티브"];
 
@@ -73,3 +43,33 @@ function SecondSelect() {
 }
 
 export default SecondSelect;
+
+const SelectField = styled.div`
+  width: 300px;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-right: 10px;
+`;
+
+const SelectHeader = styled.div`
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const SelectList = styled.div`
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  margin-top: 5px;
+`;
+
+const SelectItem = styled.div`
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+`;

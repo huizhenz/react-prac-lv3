@@ -2,43 +2,6 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { styled } from "styled-components";
 
-const InputTitle = styled.p`
-  font-size: 33px;
-  font-weight: 550;
-  margin: 15px;
-`;
-
-const InputContainer = styled.div`
-  margin: 10px;
-`;
-
-const InputField = styled.input`
-  width: 210px;
-  height: 20px;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin-right: 25px;
-  padding: 10px;
-
-  &:focus {
-    outline: 1px solid black;
-  }
-`;
-
-const InputBtn = styled.button`
-  width: 100px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  background-color: #24e8bb;
-  margin: 5px;
-  cursor: pointer;
-
-  &:active {
-    background-color: #48b09d;
-  }
-`;
-
 function Input() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -94,3 +57,40 @@ function Input() {
 }
 
 export default Input;
+
+const InputTitle = styled.p`
+  font-size: 33px;
+  font-weight: 550;
+  margin: 15px;
+`;
+
+const InputContainer = styled.div`
+  margin: 10px;
+`;
+
+const InputField = styled.input`
+  width: 210px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 25px;
+  padding: 10px;
+
+  &:focus {
+    outline: 1px solid black;
+  }
+`;
+
+const InputBtn = styled.button`
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #24e8bb;
+  margin: 5px;
+  cursor: pointer;
+
+  &:active {
+    background-color: #48b09d;
+  }
+`;

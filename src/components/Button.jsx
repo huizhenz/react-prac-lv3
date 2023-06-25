@@ -1,6 +1,54 @@
 import React from "react";
 import { styled } from "styled-components";
 
+function Button() {
+  return (
+    <>
+      <BtnTitle>Button</BtnTitle>
+      <div>
+        <LargeBtn
+          bordercolor="#00e3ae"
+          color="black"
+          onClick={() => {
+            alert("버튼을 만들어보세요");
+          }}
+        >
+          Large Primary Button >
+        </LargeBtn>
+        <MediumBtn backgroundcolor="#24e8bb" darkcolor="#48b09d" color="black">
+          Medium
+        </MediumBtn>
+        <SmallBtn backgroundcolor="#24e8bb" darkcolor="#48b09d" color="black">
+          Small
+        </SmallBtn>
+      </div>
+      <div>
+        <LargeBtn
+          bordercolor="#ffc2a1"
+          color="#c51919"
+          onClick={() => {
+            prompt("어렵나요?");
+          }}
+        >
+          Large Negative Button
+        </LargeBtn>
+        <MediumBtn
+          backgroundcolor="#fab2a4"
+          darkcolor="#d97338"
+          color="#c51919"
+        >
+          Medium
+        </MediumBtn>
+        <SmallBtn backgroundcolor="#fab2a4" darkcolor="#d97338" color="#c51919">
+          Small
+        </SmallBtn>
+      </div>
+    </>
+  );
+}
+
+export default Button;
+
 const BtnTitle = styled.p`
   font-size: 32px;
   font-weight: 600;
@@ -10,7 +58,7 @@ const BtnTitle = styled.p`
 const LargeBtn = styled.button`
   width: 200px;
   height: 50px;
-  border: 3px solid ${(props) => props.borderColor};
+  border: 3px solid ${(props) => props.bordercolor};
   border-radius: 10px;
   background-color: white;
   font-weight: bold;
@@ -29,14 +77,14 @@ const MediumBtn = styled.button`
   height: 45px;
   border: none;
   border-radius: 10px;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
   color: ${(props) => props.color};
   margin: 5px;
   cursor: pointer;
 
   // wow
   &:active {
-    background-color: ${(props) => props.darkColor};
+    background-color: ${(props) => props.darkcolor};
   }
 `;
 
@@ -45,61 +93,13 @@ const SmallBtn = styled.button`
   height: 40px;
   border: none;
   border-radius: 10px;
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
   color: ${(props) => props.color};
   margin: 5px;
   cursor: pointer;
 
   // wow
   &:active {
-    background-color: ${(props) => props.darkColor};
+    background-color: ${(props) => props.darkcolor};
   }
 `;
-
-function Button() {
-  return (
-    <>
-      <BtnTitle>Button</BtnTitle>
-      <div>
-        <LargeBtn
-          borderColor="#00e3ae"
-          color="black"
-          onClick={() => {
-            alert("버튼을 만들어보세요");
-          }}
-        >
-          Large Primary Button >
-        </LargeBtn>
-        <MediumBtn backgroundColor="#24e8bb" darkColor="#48b09d" color="black">
-          Medium
-        </MediumBtn>
-        <SmallBtn backgroundColor="#24e8bb" darkColor="#48b09d" color="black">
-          Small
-        </SmallBtn>
-      </div>
-      <div>
-        <LargeBtn
-          borderColor="#ffc2a1"
-          color="#c51919"
-          onClick={() => {
-            prompt("어렵나요?");
-          }}
-        >
-          Large Negative Button
-        </LargeBtn>
-        <MediumBtn
-          backgroundColor="#fab2a4"
-          darkColor="#d97338"
-          color="#c51919"
-        >
-          Medium
-        </MediumBtn>
-        <SmallBtn backgroundColor="#fab2a4" darkColor="#d97338" color="#c51919">
-          Small
-        </SmallBtn>
-      </div>
-    </>
-  );
-}
-
-export default Button;
