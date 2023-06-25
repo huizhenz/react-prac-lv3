@@ -64,7 +64,7 @@ function Input() {
   };
 
   const clickSaveHandler = () => {
-    if (name === "" && price === 0) {
+    if (!name && !price) {
       return alert(`이름과 가격 모두 입력해주세요.`);
     } else {
       return alert(`{ name: ${name}, price: ${price} }`);

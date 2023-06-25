@@ -68,7 +68,7 @@ function Button() {
             alert("버튼을 만들어보세요");
           }}
         >
-          Large Primary Button
+          Large Primary Button >
         </LargeBtn>
         <MediumBtn backgroundColor="#24e8bb" darkColor="#48b09d" color="black">
           Medium
@@ -80,17 +80,21 @@ function Button() {
       <div>
         <LargeBtn
           borderColor="#ffc2a1"
-          color="red"
+          color="#c51919"
           onClick={() => {
             prompt("어렵나요?");
           }}
         >
           Large Negative Button
         </LargeBtn>
-        <MediumBtn backgroundColor="#fab2a4" darkColor="#d97338" color="red">
+        <MediumBtn
+          backgroundColor="#fab2a4"
+          darkColor="#d97338"
+          color="#c51919"
+        >
           Medium
         </MediumBtn>
-        <SmallBtn backgroundColor="#fab2a4" darkColor="#d97338" color="red">
+        <SmallBtn backgroundColor="#fab2a4" darkColor="#d97338" color="#c51919">
           Small
         </SmallBtn>
       </div>

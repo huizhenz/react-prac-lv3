@@ -1,63 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
+import FirstSelect from "./select/FirstSelect";
+import SecondSelect from "./select/SecondSelect";
 
-const SelectContainer = styled.div`
-  height: 200px;
-  border: 3px solid #cfcfcf;
+const SelectWrapper = styled.div`
+  height: 220px;
+  border: 3px solid #e4e4e4;
   margin: 10px;
+  overflow: hidden;
 `;
 
-const SelectTitle = styled.h1`
-  font-size: 35px;
+const SelectTitle = styled.h2`
+  font-size: 33px;
+  font-weight: 600;
+  margin: 20px 0px 20px 0px;
 `;
 
 function Select() {
   return (
-    <SelectContainer>
-      <SelectTitle>Select</SelectTitle>
-      <div style={{ display: "flex" }}>
-        <div>
-          <select
-            style={{
-              width: "200px",
-              height: "30px",
-              borderRadius: "10px",
-              padding: "5px",
-            }}
-            name="choice"
-          >
-            <option key="react" value="react">
-              리액트
-            </option>
-            <option key="java" value="java">
-              자바
-            </option>
-            <option key="spring" value="spring">
-              스프링
-            </option>
-            <option key="reactNative" value="reactNative">
-              리액트네이티브
-            </option>
-          </select>
+    <>
+      <SelectWrapper>
+        <SelectTitle>Select</SelectTitle>
+        <div style={{ display: "flex" }}>
+          <FirstSelect />
+          <SecondSelect />
         </div>
-        <div>
-          <select name="choice">
-            <option key="react" value="react">
-              리액트
-            </option>
-            <option key="java" value="java">
-              자바
-            </option>
-            <option key="spring" value="spring">
-              스프링
-            </option>
-            <option key="reactNative" value="reactNative">
-              리액트네이티브
-            </option>
-          </select>
-        </div>
-      </div>
-    </SelectContainer>
+      </SelectWrapper>
+    </>
   );
 }
 
